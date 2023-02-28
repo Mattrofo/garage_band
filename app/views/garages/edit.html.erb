@@ -1,1 +1,9 @@
-<h1>que des champions ici !!</h1>
+<h1>Edit garage || que des champions ici !!</h1>
+
+<%= form_with model: @garage do |f| %>
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+  <%= f.label :price %>
+  <%= f.text_field :price %>
+  <%= f.submit %>
+<% end %>

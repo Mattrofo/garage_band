@@ -1,1 +1,9 @@
-<h1>Vous avancez trop bien !!</h1>
+<h1>New garage || Vous avancez trop bien !!</h1>
+
+<%= form_with model: @garage do |f| %>
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+  <%= f.label :price %>
+  <%= f.text_field :price %>
+  <%= f.submit %>
+<% end %>
