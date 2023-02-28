@@ -1,3 +1,8 @@
 <h1>Show garage || au top les gars</h1>
 <h1><%= @garage.titre %></h1>
+
 <%= link_to "Index-garages", garages_path, class: "nav-link" %>
+
+<%= link_to "edit", edit_garage_path(@garage), class: "btn-blanc" if policy(@garage).destroy? %>
+
+<%= link_to "delete", garage_path(@garage), class: "btn-blanc", data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer ?" } if policy(@garage).destroy? %>
