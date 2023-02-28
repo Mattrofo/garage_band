@@ -7,6 +7,6 @@ class User < ApplicationRecord
     has_many :garages
     has_many :bookings
 
-    validates :name, :email, presence: true
+    validates :password, :email, presence: true
 
 end
