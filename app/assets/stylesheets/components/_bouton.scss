@@ -1,0 +1,53 @@
+.btn-blanc {
+  background-image: linear-gradient(to right, #ffffff 0%, #D7DDE8  51%, #ffffff  100%);
+
+  margin: 10px;
+  padding-top: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 30px;
+  display: block;
+  width: 112px;
+  height: 34px;
+}
+
+.btn-blanc:hover {
+  background-position: right center;
+  color: #fff;
+}
+
+.btn-blanc a {
+  text-decoration: none;
+  color: rgb(207, 223, 203);
+}
+
+.btn-kaki {
+  background-image: linear-gradient(to right, #C5C7BB 0%, #D7DDE8  51%, #C5C7BB  100%);
+
+  margin: 10px;
+  padding-top: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 30px;
+  display: block;
+  width: 112px;
+  height: 34px;
+}
+
+.btn-kaki:hover {
+  background-position: right center;
+  color: #fff;
+}
+
+.btn-kaki a {
+  text-decoration: none;
+  color: white;
+}
