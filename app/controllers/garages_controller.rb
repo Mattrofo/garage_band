@@ -39,6 +39,7 @@ class GaragesController < ApplicationController
 
   def destroy
     @garage = Garage.find(params[:id])
+    authorize @garage
     @garage.destroy
     redirect_to garages_path, status: :see_other
   end
