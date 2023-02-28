@@ -38,8 +38,10 @@
   box-shadow: 0 0 20px #eee;
   border-radius: 30px;
   display: block;
-  width: 112px;
+  width: auto;
+  max-width: 165px;
   height: 34px;
+  align-self: center;
 }
 
 .btn-kaki:hover {
@@ -50,4 +52,9 @@
 .btn-kaki a {
   text-decoration: none;
   color: white;
+}
+
+#new_garage {
+  display: flex;
+  flex-direction: column;
 }
