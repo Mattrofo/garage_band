@@ -1,5 +1,5 @@
-.btn-gris {
-  background-image: linear-gradient(to right, #aab0c2 0%, #D7DDE8  51%, #aab0c2  100%);
+.btn-blanc {
+  background-image: linear-gradient(to right, #ffffff 0%, #D7DDE8  51%, #ffffff  100%);
 
   margin: 10px;
   padding-top: 3px;
@@ -15,14 +15,14 @@
   height: 34px;
 }
 
-.btn-gris:hover {
+.btn-blanc:hover {
   background-position: right center;
   color: #fff;
 }
 
-.btn-gris a {
+.btn-blanc a {
   text-decoration: none;
-  color: white;
+  color: rgb(207, 223, 203);
 }
 
 .btn-kaki {
