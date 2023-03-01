@@ -1,5 +1,6 @@
 // Import your components CSS files here.
 @import "alert";
+@import "address_autocomplete";
 @import "avatar";
 @import "form_legend_clear";
 @import "navbar";
@@ -7,6 +8,9 @@
 @import "card";
 @import "container-new";
 @import "image";
+@import "map";
+@import "home";
+
 
 body {
     background-color: #C5C7BB;

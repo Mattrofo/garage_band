@@ -1,1 +1,23 @@
-<%= link_to "Index-garages", garages_path, class: "nav-link" %>
+
+
+<div class="image">
+  <!------Hero benner ------>
+  <div class="container">
+    <div class="hero-row">
+      <div class="texte">
+        <h1>Un garage pour tous !</h1>
+        <p> Où que vous soyez, un garage vous attend. Dès maintenant, trouver la place de parking peu importe l'endroit où vous êtes</p>
+        <a href=garages class="btn-kaki variant">Réserver</a>
+      </div>
+    </div>
+  </div>
+  <!------END Hero benner ------>
+</div>
+<!------Explanation ADN------>
+
+
+<div style="width: 100%; height: 600px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
