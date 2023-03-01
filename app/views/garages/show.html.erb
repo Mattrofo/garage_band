@@ -1,5 +1,38 @@
-<h1>Show garage || au top les gars</h1>
-<h1><%= @garage.titre %></h1>
+
+<div class="container-new">
+  <div class="container-parking">
+      <div class="test">
+        <div class="card-garage">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+          <div class="card-garage-infos">
+            <div>
+              <h2>Place parking couverte</h2>
+              <p>Lille, France</p>
+            </div>
+            <h2 class="card-garage-pricing">150€</h2>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-garage-user avatar-bordered" />
+          </div>
+        </div>
+      <div class="btn-kaki"><%=link_to "Eva", root_path %></div>
+  </div>
+  <div class="container-information">
+    <div class="information-text">
+      <h1>Le parking à louer</h1>
+      <h2>Parking entier : parking d’Opale ! ⸱ Alain</h2>
+      <h3> Alain est Superhôtes </h3>
+        <p>Les Superhôtes sont des hôtes expérimentés qui bénéficient de très bonnes
+        évaluations et qui s'engagent à offrir d'excellents séjours aux vehicules.
+        </p>
+      <h3> Idélaement situé  </h3>
+        <p>100 % des voyageurs ont attribué 5 étoiles à l'emplacement du parking.</p>
+      <h3> Procédure d'arrivé irréprocheable</h3>
+       <p>100 % des voyageurs ont attribué 5 étoiles à la procédure d'arrivée.</p>
+    </div>
+  </div>
+</div>
+
+
+
 
 <%= link_to "Index-garages", garages_path, class: "nav-link" %>
 
