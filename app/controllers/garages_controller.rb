@@ -7,6 +7,7 @@ class GaragesController < ApplicationController
   end
 
   def show
+    @booking = Booking.new
     @garage = Garage.find(params[:id])
     authorize @garage
   end
