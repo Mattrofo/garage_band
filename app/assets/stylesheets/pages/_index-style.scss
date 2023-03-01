@@ -1,5 +1,10 @@
-.res{
-  color: red;
+.h1-index{
+  display: flex;
+  margin-left: 25px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  color: #474747;
+  text-shadow: 1px 2px 1px rgba(71, 71, 71, 0.3);
 }
 
 .grid-index{
@@ -7,6 +12,15 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   width: 1400px;
   margin: 0 auto;
+}
+
+.deco-none{
+  text-decoration: none;
+  color: #111;
+}
+
+.deco-none:hover{
+  color: #6b6c64;
 }
 
 @media (max-width: 1400px) {

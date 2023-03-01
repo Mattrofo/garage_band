@@ -1,11 +1,11 @@
 
-<h1 class="res">Index garages</h1>
+<h1 class="h1-index">Los Santos: Plus de 20 garages</h1>
 <div class="grid-index">
 
   <% @garages.each do |garage| %>
 
     <div class="d-flex justify-content-center">
-      <%= link_to  garage_path(garage) do%>
+      <%= link_to  garage_path(garage), class: "deco-none" do%>
       <div class="card-garage">
         <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
         <div class="card-garage-infos">
