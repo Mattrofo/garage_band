@@ -7,6 +7,7 @@
         <%= simple_form_for @garage do |f| %>
           <%= f.input :titre, placeholder: 'Place de parking' %>
           <%= f.input :address, placeholder: 'Lille, France' %>
+          <%= f.input :description, placeholder: 'Idéalement situé.....' %>
           <%= f.input :price, placeholder: '150€' %>
           <%= f.submit class: 'btn-kaki' %>
         <% end %>
