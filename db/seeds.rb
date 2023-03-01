@@ -16,9 +16,9 @@ user3 = User.create(email: "jernito@gmail.com", password: "123456")
 user4 = User.create(email: "eva@gmail.com", password: "123456")
 
 p "------ #{User.count} user created ----------"
-Garage.create(titre: "le manoir", address: "13 rue du chemin vert", price: 150, user: user1)
-Garage.create(titre: "la place du chef", address: "364 allée des roux", price: 200, user: user2)
-Garage.create(titre: "big place", address: "1 rue du champion", price: 300, user: user3)
-Garage.create(titre: "la finesse incarnée", address: "210 avenue le savon", price: 450, user: user4)
+Garage.create(titre: "le manoir", address: "13 rue du chemin vert, Boulogne-sur-mer", price: 150, user: user1)
+Garage.create(titre: "la place du chef", address: "3 avenue de la serane, Marseille", price: 200, user: user2)
+Garage.create(titre: "big place", address: "2 avenue des saules, Lille", price: 300, user: user3)
+Garage.create(titre: "la finesse incarnée", address: "12 boulevard vauban, Lille", price: 450, user: user4)
 
 p "------ #{Garage.count} garage created ----------"
