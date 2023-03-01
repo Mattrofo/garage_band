@@ -23,6 +23,10 @@
   color: #6b6c64;
 }
 
+.flexmoica {
+  display: flex;
+}
+
 @media (max-width: 1400px) {
   /* styles pour les écrans de moins de 768px de largeur */
   .grid-index{
