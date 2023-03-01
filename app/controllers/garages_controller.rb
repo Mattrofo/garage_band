@@ -4,6 +4,7 @@ class GaragesController < ApplicationController
 
   def index
     @garages = policy_scope(Garage)
+
   end
 
   def show

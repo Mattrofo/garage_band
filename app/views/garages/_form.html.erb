@@ -1,0 +1,7 @@
+<%= simple_form_for garage do |f| %>
+  <%= f.input :titre, placeholder: 'Place de parking' %>
+  <%= f.input :address, placeholder: 'Lille, France', input_html: {data: {address_autocomplete_target: "address"},  class: "d-none"},
+  wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}} %>
+  <%= f.input :price, placeholder: '150€' %>
+  <%= f.submit class: 'btn-kaki' %>
+<% end %>
