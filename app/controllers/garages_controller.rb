@@ -49,7 +49,7 @@ class GaragesController < ApplicationController
   private
 
   def garage_params
-    params.require(:garage).permit(:titre, :price, :address)
+    params.require(:garage).permit(:titre, :price, :address, :description)
   end
 
 end
