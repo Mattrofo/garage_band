@@ -1,1 +1,9 @@
-<h1>yeahhh</h1>
+<h1>Index garages</h1>
+
+<% @garages.each do |garage| %>
+
+  <%= link_to garage.titre, garage_path(garage), class: "nav-link" %>
+<% end %>
+
+
+<%= link_to "New-garage", new_garage_path, class: "nav-link" %>
