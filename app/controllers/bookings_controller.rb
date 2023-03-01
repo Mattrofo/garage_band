@@ -8,6 +8,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @garage = Garage.find(params[:garage_id])
     @booking.garage = @garage
+    @booking.status = "pending"
     authorize @booking
     if @booking.save
       flash[:success] = "Réservation créée avec succès !"
