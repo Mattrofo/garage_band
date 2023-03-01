@@ -6,3 +6,22 @@
 <%= link_to "edit", edit_garage_path(@garage), class: "btn-blanc" if policy(@garage).destroy? %>
 
 <%= link_to "delete", garage_path(@garage), class: "btn-blanc", data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer ?" } if policy(@garage).destroy? %>
+
+
+
+<%# // simple form for booking donner le garage id (coquille vide booking et garage plein)%>
+
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md-6 offset-lg-3">
+      <div class="bg-white rounded p-3 shadow">
+        <h3>Nouvelle réservation</h3>
+        <%= simple_form_for [@booking, @garage] do |f| %>
+          <%= f.association :start_date, prompt: "Choisissez une date de début", input_html: {data: { controller: "tom-select"}} %>
+          <%= f.association :end_date, prompt: "Choisissez une date de fin", input_html: {data: { controller: "tom-select"}} %>
+          <%= f.submit class: "btn-kaki" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -4,7 +4,9 @@
 
   get "componant", to: "pages#componant"
 
-  resources :garages
+  resources :garages do
+    resources :bookings, only: [:create]
+  end
 
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
