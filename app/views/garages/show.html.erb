@@ -58,9 +58,9 @@
 
 
 <div class="container d-flex">
-  <%= link_to "Retour", garages_path, class: "btn-blanc" %>
-  <%= link_to "Modifier", edit_garage_path(@garage), class: "btn-blanc" if policy(@garage).destroy? %>
-  <%= link_to "Supprimer", garage_path(@garage), class: "btn-blanc", data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer ?" } if policy(@garage).destroy? %>
+  <%= link_to "Retour", garages_path, class: "btn-noir" %>
+  <%= link_to "Modifier", edit_garage_path(@garage), class: "btn-noir" if policy(@garage).destroy? %>
+  <%= link_to "Supprimer", garage_path(@garage), class: "btn-noir", data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer ?" } if policy(@garage).destroy? %>
 </div>
 
 
@@ -75,7 +75,7 @@
         <%= simple_form_for [@garage, @booking] do |f| %>
           <%= f.input :start_date, as: :date, start_year: Date.today.year, order: [:day, :month, :year] %>
           <%= f.input :end_date, as: :date, start_year: Date.today.year, order: [:day, :month, :year] %>
-          <%= f.submit class: "btn-kaki"%>
+          <%= f.submit class: "btn-noir"%>
         <% end %>
 
       </div>
