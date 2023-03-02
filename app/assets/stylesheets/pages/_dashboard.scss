@@ -27,8 +27,14 @@
   justify-content: center;
 }
 
+.dash-title h1{
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+
 .dash-links {
-  background-color: var(--main-bg-color);
+  background-color: var(--banner-bg-color);
   width: 20%;
   display: flex;
   align-items: center;
@@ -36,10 +42,10 @@
   flex-direction: column;
   border-radius: 30px;
   border: 2px solid var(--trois-color);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 .dash-links-content {
-  background-color: var(--main-bg-color)
 }
 
 .dash-links-logo {
@@ -51,6 +57,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 2px solid var(--trois-color);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
 }
 
 .dash-links-logo p{
@@ -65,20 +73,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
 }
 .dash-orizon-div {
   width: 70%;
 }
 
-
-
 .dash-orizon-div h1 {
   margin-left: 0.5em;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+
 }
 
 .dash-orizon-div > div {
   border: 2px solid var(--trois-color);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
 }
+
+
 
 .dash-garages {
   margin-bottom: 1em;
@@ -121,8 +133,24 @@
 .dash-info-content > div{
   background-color: var(--main-bg-color);
   max-width: 200px;
-  border-radius: 30px
+  border-radius: 30px;
+  border: 2px solid var(--trois-color);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
 }
+
+
+
+
+.dash-info-content div p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  padding: 10px 0;
+}
+
+
+
 
 .dash-info-content .rounded{
   background-color: var(--main-bg-color);
@@ -150,6 +178,7 @@ div.image-container {
   flex-direction: column;
 }
 
+
 .dash-rectangle {
   width: 100px;
   height: 100px;
@@ -159,7 +188,8 @@ div.image-container {
   display: flex;
   align-items: center;
   justify-content: center;
-
+  border: 2px solid var(--trois-color);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
 }
 
 .dash-rectangle p {
