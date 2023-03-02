@@ -1,32 +1,50 @@
 
-<h1 class="h1-index">Los Santos: Plus de 20 garages</h1>
-<div class="grid-index">
+<div class="container-index">
 
-  <% @garages.each do |garage| %>
 
-    <div class="d-flex justify-content-center">
-      <%= link_to  garage_path(garage), class: "deco-none" do%>
-      <div class="card-garage">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-        <div class="card-garage-infos">
-          <div>
-            <h2><%= garage.titre%></h2>
-            <p><%= garage.address %></p>
+  <!----- H1 display --------->
+  <div class="h1-index">
+    <h1 >Plus de <%= @garages.count %> places de parking dans la zone recherchée</h1>
+  </div>
+
+  <!----- END H1 display --------->
+
+  <!----- CARDS display --------->
+  <div class="grid-index">
+    <% @garages.each do |garage| %>
+      <div class="d-flex justify-content-center">
+        <%= link_to  garage_path(garage), class: "deco-none" do%>
+        <div class="card-garage">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+          <div class="card-garage-infos">
+            <div>
+              <h2><%= garage.titre%></h2>
+              <p><%= garage.address %></p>
+            </div>
+             <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-garage-user avatar-bordered" />
+            <div class="card-garage-princing">
+              <h2><%= garage.price %>€</h2>
+            </div>
           </div>
-          <h2 class="card-garage-pricing"><%= garage.price %>€</h2>
-          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-garage-user avatar-bordered" />
         </div>
+      <% end %>
       </div>
     <% end %>
-    </div>
+  </div>
+  <!----- END CARDS display --------->
 
 
-  <% end %>
+  <!----- BTN NAV display --------->
 
-  <br><br><br><br><br>
-</div>
+  <%# <div class="flexmoica">
+    <%= link_to "New-garage", new_garage_path, class: "btn-kaki" %>
+    <!--<%= link_to "Back-Home", root_path, class: "btn-blanc" %>
+  </div> %> -->
 
-<div class="flexmoica">
-  <%= link_to "New-garage", new_garage_path, class: "btn-kaki" %>
-  <%= link_to "Back-Home", root_path, class: "btn-blanc" %>
+  <!----- END BTN NAV display --------->
+
+
+
+
+
 </div>
