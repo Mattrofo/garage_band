@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home]
 
   def home
+    raise
     @garages = Garage.all
     @markers = @garages.geocoded.map do |garage|
       {
@@ -15,6 +16,11 @@ class PagesController < ApplicationController
   end
 
   def componant
+  end
+
+  def dashboard
+    @garages = current_user.garages
+    @bookings = current_user.bookings
   end
 
 end

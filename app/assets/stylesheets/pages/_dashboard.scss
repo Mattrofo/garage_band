@@ -1,0 +1,65 @@
+.dash-container {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.dash-king-div {
+  background-color: rgb(112, 255, 3);
+  height: 90vh;
+  padding: 1em 0;
+}
+
+.dash-big-div {
+  background-color: purple;
+  padding: 1em 0;
+  display: flex;
+  justify-content: center;
+}
+
+.dash-title {
+  background-color: red;
+  display: flex;
+  justify-content: center;
+}
+
+.dash-links {
+  background-color: rgb(255, 111, 0);
+  width: 20%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.dash-orizon-div {
+  width: 70%;
+}
+
+.dash-orizon-div h1 {
+  margin-left: 0.5em;
+}
+
+.dash-garages {
+  background-color: rgb(255, 234, 0);
+}
+
+.dash-favories {
+  background-color: rgb(68, 255, 0);
+}
+
+.dash-locations {
+  background-color: rgb(0, 255, 225);
+}
+
+.dash-info {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.dash-info-content {
+  width: 95%;
+  background-color: rgb(178, 62, 5);
+}

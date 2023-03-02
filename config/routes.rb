@@ -3,6 +3,7 @@
   root to: "pages#home"
 
   get "componant", to: "pages#componant"
+  get "dashboard", to: "pages#dashboard"
 
   resources :garages do
     resources :bookings, only: [:create]
