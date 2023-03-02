@@ -13,10 +13,19 @@
 }
 
 .navbar-lewagon p {
-  font-size: small;
+  font-size: x-small;
   font-family: $headers-font;
   color: #696969;
 }
 
+.titre-logo {
+  font-size: x-large;
+}
 
+.ajouter {
+  border-style: solid;
+  border-radius: 30px;
+  border-color: #696969;
+  margin-right: 10px;
+}
 ////////////////////////////////////////////////////////////////
