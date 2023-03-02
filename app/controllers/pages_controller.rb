@@ -17,4 +17,7 @@ class PagesController < ApplicationController
   def componant
   end
 
+  def test
+  end
+
 end
