@@ -44,6 +44,8 @@ justify-content: space-between;
   .container-map{
     display: flex;
     justify-content: space-between;
+    height: 100vh;
+
   }
   .container-homemaptext {
     display: flex;
@@ -63,3 +65,23 @@ justify-content: space-between;
     font-size: 22px;
 
   }
+.scroller{
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+.scroller section {
+  scroll-snap-align: start;
+  height: 100vh;
+}
+.scrollbas
+{
+position: fixed;
+bottom : 10px;
+left: 50%;
+mix-blend-mode: multiply;
+}
+.scrollbas img {
+height: 40px;
+width: 50px;
+}
