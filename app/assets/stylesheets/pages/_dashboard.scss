@@ -1,7 +1,7 @@
 :root{
   --main-bg-color: #c5c7bb;
   --banner-bg-color: #dadbd3;
-  --trois-color: #282b0e;
+  --trois-color: #e6e6e6;
 }
 .dash-container {
   margin: 0;
@@ -68,18 +68,20 @@
   width: 70%;
 }
 
-.dash-orizon-div > div{
-  margin-bottom: 1em;
-  border: 3px solid var(--trois-color);
-  border-radius: 30px;
-  z-index: 10;
-}
+
 
 .dash-orizon-div h1 {
   margin-left: 0.5em;
 }
 
+.dash-orizon-div > div {
+  border: 2px solid var(--trois-color);
+}
+
 .dash-garages {
+  margin-bottom: 1em;
+  border-radius: 30px;
+  padding: 10px;
   background-color: var(--banner-bg-color);
 }
 .dash-orizon-div img{
@@ -88,21 +90,22 @@
 }
 .dash-favories {
   background-color: var(--banner-bg-color);
+  margin-bottom: 1em;
+  border-radius: 30px;
+  padding: 10px;
 }
 
 .dash-locations {
   background-color: var(--banner-bg-color);
+  margin-bottom: 1em;
+  border-radius: 30px;
+  padding: 10px;
 }
-.dash-info {
-  background-color: var(--main-bg-color);
-  display: flex;
-  justify-content: center;
-  border-radius: 0 0 30px 30px;
-}
+
 
 .dash-info-content {
   width: 95%;
-  background-color: var(--main-bg-color);
+  background-color: var(--banner-bg-color);
   // display: flex;
   // flex-wrap: wrap;
   // justify-content: center;
@@ -116,6 +119,7 @@
 .dash-info-content div{
   background-color: #fff;
   max-width: 200px;
+  border-radius: 30px
 }
 
 .dash-links-content {
