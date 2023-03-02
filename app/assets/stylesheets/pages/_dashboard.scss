@@ -1,3 +1,9 @@
+.dash-container {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .dash-king-div {
   background-color: rgb(112, 255, 3);
   height: 90vh;
@@ -31,6 +37,10 @@
   width: 70%;
 }
 
+.dash-orizon-div h1 {
+  margin-left: 0.5em;
+}
+
 .dash-garages {
   background-color: rgb(255, 234, 0);
 }
@@ -45,4 +55,11 @@
 
 .dash-info {
   background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.dash-info-content {
+  width: 95%;
+  background-color: rgb(178, 62, 5);
 }
