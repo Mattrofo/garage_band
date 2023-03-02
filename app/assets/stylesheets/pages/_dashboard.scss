@@ -1,3 +1,7 @@
+:root{
+  --main-bg-color: #c5c7bb;
+  --banner-bg-color: #8e9180;
+}
 .dash-container {
   margin: 0;
   padding: 0;
@@ -5,12 +9,12 @@
 }
 
 .dash-king-div {
-  background-color: rgb(112, 255, 3);
+  background-color: var(--main-bg-color);
   padding: 1em 0;
 }
 
 .dash-big-div {
-  background-color: purple;
+  background-color: var(--main-bg-color);
   padding: 1em 0;
   display: flex;
   justify-content: center;
@@ -25,25 +29,46 @@
 .dash-links {
   background-color: rgb(255, 111, 0);
   width: 20%;
-  height: 70vh;
   display: flex;
-  justify-content: center;
   align-items: center;
   margin-right: 30px;
+  flex-direction: column;
 }
 
 .dash-links-content {
   background-color: #97e200;
 }
 
+.dash-links-logo {
+  height: 100px;
+  width: 100px;
+  background-color: #e20000;
+  border-radius: 50%;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dash-links-logo p{
+  margin-bottom: 0;
+}
+
+.dash-links-button {
+  margin-top: 100px;
+  height: 50px;
+  width: 150px;
+  background-color: #e20000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .dash-orizon-div {
   width: 70%;
 }
 
 .dash-orizon-div div{
   margin-bottom: 1em;
-  margin-top: 1em;
-
 }
 
 .dash-orizon-div h1 {
@@ -51,20 +76,19 @@
 }
 
 .dash-garages {
-  background-color: rgb(255, 234, 0);
+  background-color: var(--banner-bg-color)
 }
 .dash-orizon-div img{
   height: 200px;
   width: 200px;
 }
 .dash-favories {
-  background-color: rgb(68, 255, 0);
+  background-color: var(--banner-bg-color);
 }
 
 .dash-locations {
-  background-color: rgb(0, 255, 225);
+  background-color: var(--banner-bg-color);
 }
-
 .dash-info {
   background-color: #fff;
   display: flex;
@@ -73,7 +97,7 @@
 
 .dash-info-content {
   width: 95%;
-  background-color: rgb(178, 62, 5);
+  background-color: var(--main-bg-color);
   // display: flex;
   // flex-wrap: wrap;
   // justify-content: center;
@@ -87,4 +111,32 @@
 .dash-info-content div{
   background-color: #fff;
   max-width: 200px;
+}
+
+.dash-links-content {
+
+}
+
+.dash-rectangle-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.dash-rectangle {
+  width: 100px;
+  height: 100px;
+  background-color: #e20000;
+  rotate: 45deg;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.dash-rectangle p {
+  rotate: -45deg;
+  text-align: center;
+  margin-bottom: 0;
 }
