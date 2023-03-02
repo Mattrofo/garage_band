@@ -34,7 +34,7 @@
 
 
 .dash-links {
-  background-color: var(--banner-bg-color);
+  background-color: #d1d2c7;
   width: 20%;
   display: flex;
   align-items: center;
@@ -48,7 +48,7 @@
 .dash-links-content {
 }
 
-.dash-links-logo {
+.dash-links-logo img{
   height: 100px;
   width: 100px;
   background-color: var(--banner-bg-color);
@@ -61,9 +61,6 @@
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
 }
 
-.dash-links-logo p{
-  margin-bottom: 0;
-}
 
 .dash-links-button {
   margin-top: 100px;
@@ -201,6 +198,12 @@ div.image-container {
   justify-content: center;
   border: 2px solid var(--trois-color);
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  transition: transform 0.5s;
+}
+
+.dash-rectangle:hover {
+  transform: scale(1.1, 1.1);
 }
 
 .dash-rectangle p {
