@@ -15,8 +15,19 @@
 </div>
 <!------Explanation ADN------>
 
-
-<div style="width: 100%; height: 600px;"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+<!------START MAP------>
+<div class="container-map">
+  <div style="width: 65%; height: 500px;"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+  <div class="container-homemaptext">
+    <h2> Les Avantages de Garage Band </h2>
+    <ul>
+      <li> Présent sur l'ensemble du térritoire </li>
+      <li> Prix attractif </li>
+      <li> Location courte ou longue durée</li>
+    </ul>
+  </div>
+</div>

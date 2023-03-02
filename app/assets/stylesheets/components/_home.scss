@@ -40,3 +40,26 @@ justify-content: space-between;
   margin-left: 0;
   text-decoration: none;
 }
+
+.container-map{
+  display: flex;
+  justify-content: space-between;
+}
+.container-homemaptext {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container-homemaptext h2{
+  width: clamp(150px, 90%, 20rem);
+  color: #fff;
+  font-size: 36px;
+
+}
+.container-homemaptext li{
+  width: clamp(100px, 80%, 30rem);
+  color: #fff;
+  font-size: 22px;
+
+}
