@@ -82,6 +82,8 @@
 .dash-orizon-div h1 {
   margin-left: 0.5em;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  color: #2D2D2D;
+  text-decoration: rgba(45, 45, 45, 0.5) wavy underline;
 
 }
 
@@ -89,6 +91,8 @@
   border: 2px solid var(--trois-color);
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
 }
+
+
 
 
 
@@ -116,9 +120,10 @@
   padding: 10px;
 }
 
+.dash-info {
+}
 
 .dash-info-content {
-  width: 95%;
   background-color: var(--banner-bg-color);
   // display: flex;
   // flex-wrap: wrap;
@@ -127,7 +132,8 @@
   //padding-bottom: 10px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 10px
+  gap: 10px;
+  margin-left: 70px;
 }
 
 .dash-info-content > div{
@@ -136,8 +142,13 @@
   border-radius: 30px;
   border: 2px solid var(--trois-color);
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s;
+  margin: 5px 0;
 }
 
+.dash-info-content > div:hover {
+  transform: scale(1.1, 1.1);
+}
 
 
 
