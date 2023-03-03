@@ -65,15 +65,28 @@
           <h1>Mes Demandes de Réservations (mes garages)</h1>
           <div class="dash-info-content">
 
-              <% @bookings_as_owner.each do |booking| %>
+              <% @bookings_as_owner .each do |booking| %>
                 <div>
                   <div class="image-container">
                     <%= image_tag("garage.jpg") %>
                   </div>
                   <p><%= booking.garage.titre %></p>
+                  <p>De : <%= booking.user.email %></p>
+                  <p>Du : <%= booking.start_date %></p>
+                  <p>Au : <%= booking.end_date %></p>
+                  <p><%= booking.status %></p>
+                  <p>
+                    <% if booking.status == "pending"%>
+                    <!-- --><%= link_to "accepted", booking_accepted_path(booking), data: {turbo_method: :patch, turbo_confirm: "Are you sure to accept?"} %> ||
+                    <%= link_to "accepted", booking_accepted_path(booking), { class: "accepted-link", data: {turbo_method: :patch, turbo_confirm: "Are you sure to accept?"} } %> ||
+                    <%= link_to "refused", booking_refused_path(booking), data: {turbo_method: :patch, turbo_confirm: "Are you sure to decline?"} %> ||
+                    <%= link_to "refused", booking_accepted_path(booking), { class: "refused-link", data: {turbo_method: :patch, turbo_confirm: "Are you sure to decline?"} } %> ||
+
+                  <% end %>
+                  </p>
                 </div>
 
-                <%= link_to "accepted", booking_accepted_path(booking), data: {turbo_method: :patch, turbo_confirm: "Are you sure?"} %>
+
               <% end %>
 
             </div>

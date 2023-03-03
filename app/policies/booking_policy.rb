@@ -13,4 +13,8 @@ class BookingPolicy < ApplicationPolicy
   def accepted?
     true
   end
+
+  def refused?
+    true
+  end
 end
