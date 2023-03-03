@@ -7,10 +7,13 @@ import { application } from "./application"
 import AddressAutocompleteController from "./address_autocomplete_controller"
 application.register("address-autocomplete", AddressAutocompleteController)
 
-import HelloController from "./hello_controller"
-application.register("hello", HelloController)
+import FlatpickrController from "./flatpickr_controller"
+application.register("flatpickr", FlatpickrController)
 
 
 
 import MapController from "./map_controller"
 application.register("map", MapController)
+
+import ScrollerController from "./scroller_controller"
+application.register("scroller", ScrollerController)

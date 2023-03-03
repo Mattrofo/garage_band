@@ -9,7 +9,38 @@
 
   <!----- END H1 display --------->
 
+
+  <!----- SEARCH BAR display --------->
+
+<div class="content">
+  <div class="btn-rond">
+    <%= link_to root_path, class: "btn-rond-back" do %>
+      <i class="fa-sharp fa-solid fa-circle-left"></i>
+    <% end %>
+  </div>
+  <div class="btn-rond">
+    <%= link_to new_garage_path, class: "btn-rond-new" do %>
+      <i class="fa-solid fa-plus"></i>
+    <% end %>
+  </div>
+    <div class="search">
+      <input type="text" class="search__input" aria-label="search" placeholder="enter your search">
+      <button class="search__submit" aria-label="submit search"><i class="fas fa-search"></i></button>
+    </div>
+    <!--<% form_tag(garages_path, method: "get") do %>
+      <%= text_field_tag :query, nil, placeholder:"enter your search", class: "search__input"%>
+      <%= submit_tag "", class:"fas fa-search" %>
+    <% end %>-->
+  </div>
+</div>
+
+    <!----- SEARCH BAR display --------->
+
+
+
+
   <!----- CARDS display --------->
+
   <div class="grid-index">
     <% @garages.each do |garage| %>
       <div class="d-flex justify-content-center">
@@ -31,20 +62,23 @@
       </div>
     <% end %>
   </div>
+
   <!----- END CARDS display --------->
 
 
-  <!----- BTN NAV display --------->
 
   <%# <div class="flexmoica">
     <%= link_to "New-garage", new_garage_path, class: "btn-kaki" %>
-    <!--<%= link_to "Back-Home", root_path, class: "btn-blanc" %>
+    <!--<%= link_to "Back-Home", root_path, class: "btn-noir" %>
   </div> %> -->
 
-  <!----- END BTN NAV display --------->
+
+  <!----- BTN Go up display --------->
+  <div class="gotopbtn">
+    <a href="#"><span class="fas fa-angle-up"></span></a>
+  </div>
 
 
-
-
+  <!----- BTN Go up display --------->
 
 </div>

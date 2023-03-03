@@ -1,3 +1,8 @@
+:root{
+  --main-bg-color: #c5c7bb;
+  --banner-bg-color: #dadbd3;
+  --trois-color: #e6e6e6;
+}
 .dash-container {
   margin: 0;
   padding: 0;
@@ -5,61 +10,204 @@
 }
 
 .dash-king-div {
-  background-color: rgb(112, 255, 3);
-  height: 90vh;
+  background-color: var(--main-bg-color);
   padding: 1em 0;
 }
 
 .dash-big-div {
-  background-color: purple;
+  background-color: var(--main-bg-color);
   padding: 1em 0;
   display: flex;
   justify-content: center;
 }
 
 .dash-title {
-  background-color: red;
+  background-color: var(--banner-bg-color);
   display: flex;
   justify-content: center;
 }
+
+.dash-title h1{
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+
 
 .dash-links {
-  background-color: rgb(255, 111, 0);
+  background-color: #d1d2c7;
   width: 20%;
-  height: 70vh;
   display: flex;
-  justify-content: center;
   align-items: center;
   margin-right: 30px;
+  flex-direction: column;
+  border-radius: 30px;
+  border: 2px solid var(--trois-color);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
 }
 
+.dash-links-content {
+}
+
+.dash-links-logo img{
+  height: 100px;
+  width: 100px;
+  background-color: var(--banner-bg-color);
+  border-radius: 50%;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--trois-color);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+.dash-links-button {
+  margin-top: 100px;
+  height: 50px;
+  width: 150px;
+  background-color: var(--banner-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
 .dash-orizon-div {
   width: 70%;
 }
 
 .dash-orizon-div h1 {
   margin-left: 0.5em;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  color: #2D2D2D;
+  text-decoration: rgba(45, 45, 45, 0.5) wavy underline;
+
 }
+
+.dash-orizon-div > div {
+  border: 2px solid var(--trois-color);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
 
 .dash-garages {
-  background-color: rgb(255, 234, 0);
+  margin-bottom: 1em;
+  border-radius: 30px;
+  padding: 10px;
+  background-color: var(--banner-bg-color);
 }
-
+.dash-orizon-div img{
+  height: 200px;
+  width: 200px;
+}
 .dash-favories {
-  background-color: rgb(68, 255, 0);
+  background-color: var(--banner-bg-color);
+  margin-bottom: 1em;
+  border-radius: 30px;
+  padding: 10px;
 }
 
 .dash-locations {
-  background-color: rgb(0, 255, 225);
+  background-color: var(--banner-bg-color);
+  margin-bottom: 1em;
+  border-radius: 30px;
+  padding: 10px;
 }
 
 .dash-info {
-  background-color: #fff;
-  display: flex;
-  justify-content: center;
 }
 
 .dash-info-content {
-  width: 95%;
-  background-color: rgb(178, 62, 5);
+  background-color: var(--banner-bg-color);
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: center;
+  padding: 1em;
+  //padding-bottom: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin-left: 70px;
+}
+
+.dash-info-content > div{
+  background-color: var(--main-bg-color);
+  max-width: 200px;
+  border-radius: 30px;
+  border: 2px solid var(--trois-color);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s;
+  margin: 5px 0;
+}
+
+.dash-info-content > div:hover {
+  transform: scale(1.1, 1.1);
+}
+
+
+
+.dash-info-content div p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  padding: 10px 0;
+}
+
+
+
+
+.dash-info-content .rounded{
+  background-color: var(--main-bg-color);
+  max-width: 200px;
+  border-radius: 30px
+}
+
+div.image-container {
+  border-radius: 30px 30px 0 0;
+  overflow: hidden; // pour que le border-radius soit visible
+  img {
+    width: 100%; // pour s'assurer que l'image remplit le conteneur
+    height: auto; // pour conserver les proportions de l'image
+  }
+}
+
+
+.dash-links-content {
+
+}
+
+.dash-rectangle-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.dash-rectangle {
+  width: 100px;
+  height: 100px;
+  background-color: var(--banner-bg-color);
+  rotate: 45deg;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--trois-color);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  transition: transform 0.5s;
+}
+
+.dash-rectangle:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.dash-rectangle p {
+  rotate: -45deg;
+  text-align: center;
+  margin-bottom: 0;
 }

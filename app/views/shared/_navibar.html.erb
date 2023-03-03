@@ -1,32 +1,36 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
 
-    <h1><strong>Garage</strong>Band</h1>
+    <h1 class="titre-logo"><strong>Garage</strong>Band</h1>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
       <ul class="navbar-nav me-auto">
+        <% if user_signed_in? %>
+          <div class="ajouter">
+            <li class="nav-item active">
+              <%= link_to "Ajouter mon garage", new_garage_path, class: "nav-link" %>
+            </li>
+          </div>
 
-        <%# if user_signed_in? %>
+            <li class="nav-item dropdown">
+              <%= link_to "Mon Profil", "#", class: "nav-link", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <%= link_to "Accueil", root_path, class: "dropdown-item" %>
+                  <%= link_to "Tableau de bord", dashboard_path, class: "dropdown-item" %>
+                  <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class: "dropdown-item", data: {turbo_method: :delete} %>
+                </div>
+             </li>
+        <% else %>
+          <div class="ajouter">
+            <li class="nav-item">
+              <%= link_to "S'inscrire", new_user_registration_path, class: "nav-link" %>
+            </li>
+          </div>
 
-          <li class="nav-item active">
-            <%= link_to "Accueil", "#", class: "nav-link" %>
-          </li>
-
-          <li class="nav-item dropdown">
-            <%= link_to "Mon Profil", "#", class: "nav-link", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Menu", "#", class: "dropdown-item" %>
-              <%= link_to "Ajouter un garage", "#", class: "dropdown-item" %>
-              <%= link_to "Mes bookings", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
-            </div>
-          </li>
-
-        <%# else %>
-          <!--li class="nav-item"-->
-            <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
-          <!--/li-->
-        <%# end %>
+            <li class="nav-item">
+              <%= link_to "Se connecter", user_session_path, class: "nav-link" %>
+            </li>
+        <% end %>
       </ul>
     </div>
   </div>
