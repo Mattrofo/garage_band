@@ -1,16 +1,16 @@
-
-
 <div class="container py-5">
   <div class="row">
     <div class="col 12 col-md-6 offset-lg-3">
       <div class="bg-white rounded p-3 shadow">
-        <h3>Modifier votre garage :</h3>
-          <%= simple_form_for @garage do |f| %>
-            <%= f.input :titre, placeholder: 'Place de parking' %>
-            <%= f.input :address, placeholder: 'Lille, France' %>
-            <%= f.input :price, placeholder: '150€' %>
-            <%= f.submit class: 'btn-kaki' %>
-          <% end %>
+        <h3>Editer mon garage :</h3>
+        <%= simple_form_for @garage do |f| %>
+          <%= f.input :titre, placeholder: 'Place de parking' %>
+          <%= f.input :address, placeholder: 'Lille, France' %>
+          <%= f.input :description, placeholder: 'Idéalement situé.....' %>
+          <%= f.input :price, placeholder: '150€' %>
+          <%= f.input :photo, as: :file %>
+          <%= f.submit class: 'btn-noir' %>
+        <% end %>
       </div>
     </div>
   </div>

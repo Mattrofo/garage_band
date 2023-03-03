@@ -1,32 +1,137 @@
 
+.container-main {
+  padding: auto;
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.container-show {
+
+display: flex;
+justify-content: center;
+align-items: normal;
+flex-direction: column;
+margin-top: 50px;
+}
+
+
+.row-1 {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 54px;
+}
+
 
 .container-info {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 25px;
-  margin-left: 100px;
+  margin: 0 50px;
+  width: 500px;
 }
+
+.image-principale {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+}
+
 
 
 .description-show {
   border: 1px solid #808371;
   border-radius: 10px;
-  width: 479px;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
-.description-show p {
+.description-show {
   font-size: medium;
   text-align: center;
   padding: 17px;
+  background-color: white;
 }
 
 .photo-double {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+
+.row-2 {
+  display: flex;
   justify-content: center;
   align-items: center;
+  }
+
+.container-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+}
+
+.image-map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+}
+
+
+.form-show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-bottom {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding: 50px;
+}
+
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+
+h4 {
+color: white;
+}
+
+.nav-bottom a {
+  border: 1px solid #808371;
+  background-color: white;
 }
