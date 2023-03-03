@@ -12,7 +12,7 @@ class BookingsController < ApplicationController
     authorize @booking
     if @booking.save
       flash[:success] = "Réservation créée avec succès !"
-      redirect_to root_path
+      redirect_to dashboard_path
     else
       render :action => 'new'
     end
