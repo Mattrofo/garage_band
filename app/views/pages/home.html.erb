@@ -1,33 +1,44 @@
 
+<div class="scroller" data-controller= "scroller" data-scroller-target= "container">
+  <section>
+    <div class="scrollbas" data-action="click->scroller#scroller">
 
-<div class="background_voiture">
-  <!------Hero benner ------>
-  <div class="container">
-    <div class="hero-row">
-      <div class="texte">
-        <h1>Un garage pour tous !</h1>
-        <p> Où que vous soyez, un garage vous attend. Dès maintenant, trouver la place de parking peu importe l'endroit où vous êtes</p>
-        <div class="btn-row"><a href=garages class="btn-kaki">Réserver</a></div>
+
+      <%= image_tag("fleche_bot.png") %>
+    </div>
+    <div class="background_voiture">
+      <!------Hero benner ------>
+      <div class="container">
+        <div class="hero-row">
+          <div class="texte">
+            <h1>Un garage pour tous !</h1>
+            <p> Où que vous soyez, un garage vous attend. Dès maintenant, trouver la place de parking peu importe l'endroit où vous êtes</p>
+           <div class="btn-row"><a href=garages class="btn-kaki">Réserver</a></div>
+          </div>
+        </div>
+
+      </div>
+      <!------END Hero benner ------>
+    </div>
+  </section>
+  <!------Explanation ADN------>
+
+  <!------START MAP------>
+  <section id="map-section">
+    <div class="container-map">
+      <div style="width: 60%; height:90vh; margin:30px;"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+      <div class="container-homemaptext">
+        <h2> Les Avantages de Garage Band </h2>
+        <ul>
+          <li> Présent sur l'ensemble du térritoire </li>
+          <li> Prix attractif </li>
+          <li> Location courte ou longue durée</li>
+        </ul>
       </div>
     </div>
-  </div>
-  <!------END Hero benner ------>
-</div>
-<!------Explanation ADN------>
-
-<!------START MAP------>
-<div class="container-map">
-  <div style="width: 65%; height: 500px;"
-    data-controller="map"
-    data-map-markers-value="<%= @markers.to_json %>"
-    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-  </div>
-  <div class="container-homemaptext">
-    <h2> Les Avantages de Garage Band </h2>
-    <ul>
-      <li> Présent sur l'ensemble du térritoire </li>
-      <li> Prix attractif </li>
-      <li> Location courte ou longue durée</li>
-    </ul>
-  </div>
+  </section>
 </div>
