@@ -14,3 +14,13 @@
 
 
 @import "flatpickr/dist/flatpickr.css";
+
+
+.link-without-style{
+  text-decoration: none;
+  color: inherit;
+}
+
+.link-without-style:hover{
+  color: #fff;
+}
