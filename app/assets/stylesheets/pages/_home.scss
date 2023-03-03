@@ -74,13 +74,14 @@ justify-content: space-between;
   scroll-snap-type: y mandatory;
 }
 .scroller section {
+  position: relative;
   scroll-snap-align: start;
   height: 100vh;
 }
 .scrollbas
 {
-position: fixed;
-bottom : 10px;
+position: absolute;
+bottom : 12vh;
 left: 50%;
 mix-blend-mode: multiply;
 }

@@ -49,7 +49,7 @@
       <div class="d-flex justify-content-center">
         <%= link_to  garage_path(garage), class: "deco-none" do%>
         <div class="card-garage">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+          <%= cl_image_tag garage.photo.key, height: 300, width: 400, crop: :fill %>
           <div class="card-garage-infos">
             <div>
               <h2><%= garage.titre%></h2>
