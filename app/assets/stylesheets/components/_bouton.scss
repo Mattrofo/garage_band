@@ -1,60 +1,99 @@
-.btn-blanc {
-  background-image: linear-gradient(to right, #cdcdcd 0%, #D7DDE8  51%, #cdcdcd  100%);
 
-  margin: 10px;
-  padding-top: 3px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 30px;
-  display: block;
-  width: 112px;
-  height: 34px;
-}
-
-.btn-blanc:hover {
-  background-position: right center;
-  color: #fff;
-}
-
-.btn-blanc a {
-  text-decoration: none;
-  color: rgb(207, 223, 203);
-}
+////////////////////////////////////////////////////////////////
+/// bouton accueil ///
 
 .btn-kaki {
-  background-image: linear-gradient(to right, #C5C7BB 0%, #D7DDE8  51%, #C5C7BB  100%);
-
-  margin: 10px;
-  padding-top: 3px;
+  align-items: center;
+  background-color: #ffffff00;
+  border: 2px solid #ffff;
+  box-sizing: border-box;
+  color: #ffff;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  font-size: 25px;
+  font-family: $headers-font;
+  font-weight: 300;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -.8px;
+  line-height: 24px;
+  outline: 0;
+  padding: 17 17px;
   text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 30px;
-  display: block;
-  width: auto;
-  max-width: 165px;
-  height: 34px;
-  align-self: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100px;
+}
+
+.btn-kaki:focus {
+  color: #171e29;
 }
 
 .btn-kaki:hover {
-  background-position: right center;
-  color: #fff;
+  border-color: #C5C7BB;
+  color: #C5C7BB;
+  fill: #C5C7BB;
 }
 
-.btn-kaki a {
+.btn-kaki:active {
+  border-color: #C5C7BB;
+  color: #C5C7BB;
+  fill: #C5C7BB;
+}
+
+.btn-row {
+  width: clamp(200px, 0%, 40rem);
+  margin-left: 12%;
+}
+ ////////////////////////////////////////////////////////////////
+ /// bouton pour formulaire
+
+ .btn-noir {
+  align-items: center;
+  background-color: #ffffff00;
+  border: 1px solid #0606069a;
+  box-sizing: border-box;
+  color: #0606069a;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  font-size: 25px;
+  font-family: $headers-font;
+
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -.8px;
+  line-height: 24px;
+  outline: 0;
+  padding: 17 17px;
+  text-align: center;
   text-decoration: none;
-  color: white;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 200px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-left: 150px;
 }
 
-#new_garage {
-  display: flex;
-  flex-direction: column;
+.btn-noir:focus {
+  color: #171e29;
+}
+
+.btn-noir:hover {
+  border-color: #8a8f6c;
+  color: #8a8f6c;
+  fill: #8a8f6c;
+}
+
+.btn-noir:active {
+  border-color: #8a8f6c;
+  color: #8a8f6c;
+  fill: #8a8f6c;
 }
