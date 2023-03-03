@@ -54,16 +54,15 @@ justify-content: space-between;
     justify-content: center;
   }
   .container-homemaptext h2{
-    width: clamp(150px, 90%, 20rem);
-    color: #fff;
+    width: 600px;
+    color: #696969;
     font-size: 36px;
 
   }
-  .container-homemaptext li{
-    width: clamp(100px, 80%, 30rem);
-    color: #fff;
+  .container-homemaptext ul{
+    width: 600px;
+    color: #696969;
     font-size: 22px;
-
   }
 .scroller{
   height: 100vh;
