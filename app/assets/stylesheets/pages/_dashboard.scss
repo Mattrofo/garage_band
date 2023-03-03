@@ -11,7 +11,6 @@
 
 .dash-king-div {
   background-color: var(--main-bg-color);
-  padding: 1em 0;
 }
 
 .dash-big-div {
@@ -22,9 +21,10 @@
 }
 
 .dash-title {
-  background-color: var(--banner-bg-color);
+  background-color: var(--main-bg-color);
   display: flex;
   justify-content: center;
+  margin-top: 30px;
 }
 
 .dash-title h1{
@@ -73,14 +73,13 @@
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
 }
 .dash-orizon-div {
-  width: 70%;
+  width: 85%;
 }
 
 .dash-orizon-div h1 {
   margin-left: 0.5em;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
   color: #2D2D2D;
-  text-decoration: rgba(45, 45, 45, 0.5) wavy underline;
 
 }
 
@@ -154,7 +153,6 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 0;
-  padding: 10px 0;
 }
 
 
@@ -214,8 +212,32 @@ div.image-container {
 
 .accepted-link {
   background-color: #6fc16f;
+  text-decoration: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 30px;
+}
+
+.accepted-link:hover {
+  color: #fff;
 }
 
 .refused-link {
   background-color: #c16f6f;
+  text-decoration: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 30px;
+}
+
+.refused-link:hover {
+  color: #fff;
+}
+
+.refused-confirmation{
+  color: #c16f6f;
+}
+
+.accepted-confirmation{
+  color: #6fc16f;
 }
