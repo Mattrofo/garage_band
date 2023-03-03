@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
     has_many :garages, dependent: :destroy
     has_many :bookings
-
+    has_many :bookings_as_owner, through: :garages, source: :bookings
     validates :password, :email, presence: true
 
 end

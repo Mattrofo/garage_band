@@ -18,6 +18,12 @@ class BookingsController < ApplicationController
     end
   end
 
+  def accepted
+    @booking = Booking.find(params[:id])
+    authorize @booking
+    raise
+  end
+
   private
 
   def booking_params
