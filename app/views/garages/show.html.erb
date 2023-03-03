@@ -1,79 +1,59 @@
-
-<div class="container py-5">
-  <div>
-  <h1><strong><%= @garage.titre %></strong></h1>
-  <h4><%= @garage.address %></h4>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1495435229349-e86db7bfa013?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1677&q=80);">
+  <div class="container">
+    <h1><strong><%= @garage.titre %></strong></h1>
+    <h4><%= @garage.address %></h4>
   </div>
-
-  <div class="d-flex justify-content-center">
-
-    <div class="mt-5 p-3">
-      <%= cl_image_tag @garage.photo.key, height: 300, width: 400, crop: :fill %>
-    </div>
-
-    <div class="container-info">
-
-      <div class="photo-double">
-        <div class="p-3">
-          <img class="petite-image", src="https://images.unsplash.com/photo-1548184274-f1d3776448b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="un garage">
-        </div>
-
-        <div class="p-3">
-          <img class="petite-image", src="https://images.unsplash.com/photo-1530046614490-89e6f776b83b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="un garage">
-        </div>
-      </div>
-
-      <div class="description-show">
-            <p><%= @garage.description %></p>
-      </div>
-
-    </div>
-  </div>
-
-
-  <%# //////////////////////////////////////////////////////////////// %>
-<div class="d-flex justify-content-center">
-
-    <div class="m-5 p-3">
-      <h2><%= "En savoir plus sur #{@garage.titre}" %></h2>
-      <p><%= @garage.description %></p>
-    </div>
-
-    <div class="m-5 px-5">
-
-      <div>
-        <img class="image", src="https://images.unsplash.com/photo-1510758588288-aa8cf9445f5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80" alt="map">
-      </div>
-
-    </div>
-  </div>
-  <%# //////////////////////////////////////////////////////////////// %>
 </div>
 
 
+<div class="container-main">
+  <div class="row-1">
+    <div class="image-principale">
+      <%= cl_image_tag @garage.photo.key, height: 300, width: 400, crop: :fill, class:"image" %>
+    </div>
+  <div class="container-info">
+      <div class="photo-double">
+        <div class="garage-info">
+          <%= @garage.price %>€/day
+        </div>
+        <div class="garage-info">
+          <%= @garage.address %>
+        </div>
+      </div>
+    <div class="description-show">
+        <%= @garage.description %>
+    </div>
+  </div>
+  <div class="row-2">
+  <div class="container-form">
+      <div class="form-show">
+        <div class="bg-white rounded p-3 shadow">
+          <h3>Nouvelle réservation</h3>
+          <%= simple_form_for [@garage, @booking], data: { controller: 'flatpickr' } do |f| %>
+            <%= f.input :start_date, as: :string, input_html: { data: { flatpickr_target: "startDate" } } %>
+            <%= f.input :end_date, as: :string, input_html: { data: { flatpickr_target: "endDate" } } %>
+            <%= f.submit "Réserver !", class: "btn-noir"%>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<div class="container d-flex">
+
+  <%# //////////////////////////////////////////////////////////////// %>
+
+
+  <%# //////////////////////////////////////////////////////////////// %>
+
+
+
+
+<div class="nav-bottom">
   <%= link_to "Retour", garages_path, class: "btn-noir" %>
   <%= link_to "Modifier", edit_garage_path(@garage), class: "btn-noir" if policy(@garage).destroy? %>
   <%= link_to "Supprimer", garage_path(@garage), class: "btn-noir", data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer ?" } if policy(@garage).destroy? %>
 </div>
 
-
-<%# // simple form for booking donner le garage id (coquille vide booking et garage plein)%>
-
-<div class="container py-5">
-  <div class="row">
-    <div class="col-12 col-md-6 offset-lg-3">
-      <div class="bg-white rounded p-3 shadow">
-
-        <h3>Nouvelle réservation</h3>
-        <%= simple_form_for [@garage, @booking], data: { controller: 'flatpickr' } do |f| %>
-          <%= f.input :start_date, as: :string, input_html: { data: { flatpickr_target: "startDate" } } %>
-          <%= f.input :end_date, as: :string, input_html: { data: { flatpickr_target: "endDate" } } %>
-          <%= f.submit "Réserver !", class: "btn-noir"%>
-        <% end %>
-
-      </div>
-    </div>
-  </div>
 </div>
+<%# // simple form for booking donner le garage id (coquille vide booking et garage plein)%>
