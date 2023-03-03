@@ -10,6 +10,8 @@ application.register("address-autocomplete", AddressAutocompleteController)
 import FlatpickrController from "./flatpickr_controller"
 application.register("flatpickr", FlatpickrController)
 
+
+
 import MapController from "./map_controller"
 application.register("map", MapController)
 

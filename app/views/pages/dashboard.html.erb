@@ -50,56 +50,44 @@
           <h1>Mes Garages</h1>
             <div class="dash-info-content">
 
-              <div>
-                <div class="image-container">
-                  <%= image_tag("garage.jpg") %>
+              <% @garages.each do |garage| %>
+                <div>
+                  <div class="image-container">
+                    <%= image_tag("garage.jpg") %>
+                  </div>
+                  <p><%= garage.titre %></p>
                 </div>
-
-                <p>blabla mes blabla</p>
-              </div>
-
-              <div>
-                <div class="image-container">
-                  <%= image_tag("garage.jpg") %>
-                </div>
-                <p>blabla mes blabla</p>
-              </div>
-
-              <div>
-                <div class="image-container">
-                  <%= image_tag("garage.jpg") %>
-                </div>
-                <p>blabla mes blabla</p>
-              </div>
-
-            </div>
+              <% end %>
           </div>
         </div>
 
         <div class="dash-favories">
-          <h1>Mes Favoris</h1>
+          <h1>Mes Demandes de Réservations (mes garages)</h1>
           <div class="dash-info-content">
 
-              <div>
-                <div class="image-container">
-                  <%= image_tag("garage.jpg") %>
-                </div>
-                <p>blabla mes blabla</p>
-              </div>
+              <% @bookings_as_owner .each do |booking| %>
+                <div>
+                  <div class="image-container">
+                    <%= image_tag("garage.jpg") %>
+                  </div>
+                  <p><%= booking.garage.titre %></p>
+                  <p>De : <%= booking.user.email %></p>
+                  <p>Du : <%= booking.start_date %></p>
+                  <p>Au : <%= booking.end_date %></p>
+                  <p><%= booking.status %></p>
+                  <p>
+                    <% if booking.status == "pending"%>
+                    <!-- --><%= link_to "accepted", booking_accepted_path(booking), data: {turbo_method: :patch, turbo_confirm: "Are you sure to accept?"} %> ||
+                    <%= link_to "accepted", booking_accepted_path(booking), { class: "accepted-link", data: {turbo_method: :patch, turbo_confirm: "Are you sure to accept?"} } %> ||
+                    <%= link_to "refused", booking_refused_path(booking), data: {turbo_method: :patch, turbo_confirm: "Are you sure to decline?"} %> ||
+                    <%= link_to "refused", booking_accepted_path(booking), { class: "refused-link", data: {turbo_method: :patch, turbo_confirm: "Are you sure to decline?"} } %> ||
 
-              <div>
-                <div class="image-container">
-                  <%= image_tag("garage.jpg") %>
+                  <% end %>
+                  </p>
                 </div>
-                <p>blabla mes blabla</p>
-              </div>
 
-              <div>
-                <div class="image-container">
-                  <%= image_tag("garage.jpg") %>
-                </div>
-                <p>blabla mes blabla</p>
-              </div>
+
+              <% end %>
 
             </div>
         </div>
@@ -108,28 +96,17 @@
           <h1>Mes Locations</h1>
           <div class="dash-info-content">
 
-              <div>
-                <div class="image-container">
-                  <%= image_tag("garage.jpg") %>
+            <% @bookings.each do |booking| %>
+                <div>
+                  <div class="image-container">
+                    <%= image_tag("garage.jpg") %>
+                  </div>
+                  <p><%= booking.garage.titre %></p>
                 </div>
-                <p>blabla mes blabla</p>
-              </div>
+              <% end %>
 
-              <div>
-                <div class="image-container">
-                  <%= image_tag("garage.jpg") %>
-                </div>
-                <p>blabla mes blabla</p>
-              </div>
 
-              <div>
-                <div class="image-container">
-                  <%= image_tag("garage.jpg") %>
-                </div>
-                <p>blabla mes blabla</p>
-              </div>
-
-            </div>
+          </div>
         </div>
 
 
