@@ -5,10 +5,10 @@ User.destroy_all
 p "------ All users Destroyed ----------"
 Garage.destroy_all
 p "------ All garages Destroyed ----------"
-user1 = User.create(email: "mathieu@gmail.com", password: "123456")
-user2 = User.create(email: "dorian@gmail.com", password: "123456")
-user3 = User.create(email: "jernito@gmail.com", password: "123456")
-user4 = User.create(email: "eva@gmail.com", password: "123456")
+user1 = User.create(email: "mathieu@gmail.com", password: "123456", name: "Mathieu")
+user2 = User.create(email: "dorian@gmail.com", password: "123456", name: "Dorian")
+user3 = User.create(email: "jernito@gmail.com", password: "123456",name: "Jernito")
+user4 = User.create(email: "eva@gmail.com", password: "123456", name: "Eva")
 
 p "------ #{User.count} user created ----------"
 # Garage.create(titre: "le manoir", address: "13 rue du chemin vert, Boulogne-sur-mer", price: 150, user: user1)

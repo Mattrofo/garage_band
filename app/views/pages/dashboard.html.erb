@@ -6,84 +6,71 @@
   <div class="dash-king-div">
 
     <div class="dash-title">
-      <h1>Tableau de bord</h1>
+      <h1>Tableau de bord de <%= current_user.name %></h1>
     </div>
 
     <div class="dash-big-div">
 
-      <div class="dash-links">
-        <!-- <h1>Mes Links</h1> -->
-        <div class="dash-links-logo">
-          <%= image_tag("garage.jpg") %>
-        </div>
-        <div class="dash-links-content">
 
-
-
-          <div class="dash-rectangle-content">
-
-            <div class="dash-rectangle">
-              <p>test</p>
-            </div>
-
-            <div class="dash-rectangle">
-              <p>test1</p>
-            </div>
-
-            <div class="dash-rectangle">
-              <p>test2</p>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="dash-links-button">
-          <a href="#">Acceuil</a>
-        </div>
-      </div>
 
       <div class="dash-orizon-div">
 
         <div class="dash-garages">
 
           <div class="dash-info">
-          <h1>Mes Garages</h1>
+          <h1>Mes Annonces</h1>
             <div class="dash-info-content">
 
               <% @garages.each do |garage| %>
-                <div>
-                  <div class="image-container">
-                    <%= image_tag("garage.jpg") %>
+
+
+
+                  <div>
+                    <div class="image-container">
+                      <%= cl_image_tag garage.photo.key, height: 200, width: 200, crop: :fill %>
+                    </div>
+                    <br>
+                    <%= link_to garage_path(garage), class:'link-without-style' do  %>
+                      <p><%= garage.titre.upcase %></p>
+                    <% end %>
+                    <br>
                   </div>
-                  <p><%= garage.titre %></p>
-                </div>
+
               <% end %>
           </div>
         </div>
 
         <div class="dash-favories">
-          <h1>Mes Demandes de Réservations (mes garages)</h1>
+          <h1>Demandes de réservation</h1>
           <div class="dash-info-content">
 
-              <% @bookings_as_owner .each do |booking| %>
+              <% @bookings_as_owner.each do |booking| %>
                 <div>
-                  <div class="image-container">
-                    <%= image_tag("garage.jpg") %>
-                  </div>
-                  <p><%= booking.garage.titre %></p>
+
+                  <br>
+                  <p><%= booking.garage.titre.upcase %></p>
+                  <br>
                   <p>De : <%= booking.user.email %></p>
-                  <p>Du : <%= booking.start_date %></p>
-                  <p>Au : <%= booking.end_date %></p>
-                  <p><%= booking.status %></p>
+                  <p>Du : <%= booking.start_date.strftime('%-d %b. %y') %></p>
+                  <p>Au : <%= booking.end_date.strftime('%-d %b. %y') %></p>
+                  <br>
+                  <% if booking.status == "accepted" || booking.status == "refused" %>
+
+                      <p class="<%= booking.status == 'accepted' ? 'accepted-confirmation' : ' refused-confirmation' %>">
+                      <strong><%= booking.status.upcase %></strong></p>
+                  <% end %>
+
+
+                  <br>
                   <p>
                     <% if booking.status == "pending"%>
-                    <!-- --><%= link_to "accepted", booking_accepted_path(booking), data: {turbo_method: :patch, turbo_confirm: "Are you sure to accept?"} %> ||
-                    <%= link_to "accepted", booking_accepted_path(booking), { class: "accepted-link", data: {turbo_method: :patch, turbo_confirm: "Are you sure to accept?"} } %> ||
-                    <%= link_to "refused", booking_refused_path(booking), data: {turbo_method: :patch, turbo_confirm: "Are you sure to decline?"} %> ||
-                    <%= link_to "refused", booking_accepted_path(booking), { class: "refused-link", data: {turbo_method: :patch, turbo_confirm: "Are you sure to decline?"} } %> ||
-
-                  <% end %>
+                      <!-- <%= link_to "accepted", booking_accepted_path(booking), data: {turbo_method: :patch, turbo_confirm: "Are you sure to accept?"} %> || -->
+                      <%= link_to "accepter", booking_accepted_path(booking), { class: "accepted-link", data: {turbo_method: :patch, turbo_confirm: "Are you sure to accept?"} } %> ||
+                      <!-- <%= link_to "refused", booking_refused_path(booking), data: {turbo_method: :patch, turbo_confirm: "Are you sure to decline?"} %> || -->
+                      <%= link_to "refuser", booking_refused_path(booking), { class: "refused-link", data: {turbo_method: :patch, turbo_confirm: "Are you sure to decline?"} } %>
+                    <% end %>
                   </p>
+                  <br>
                 </div>
 
 
@@ -99,9 +86,26 @@
             <% @bookings.each do |booking| %>
                 <div>
                   <div class="image-container">
-                    <%= image_tag("garage.jpg") %>
+                    <%= cl_image_tag booking.garage.photo.key, height: 200, width: 200, crop: :fill %>
                   </div>
-                  <p><%= booking.garage.titre %></p>
+
+
+                  <br>
+                  <p><%= booking.garage.titre.upcase %></p>
+                  <center> <small><em><%= booking.garage.user.email %></em></small></center>
+
+                  <br>
+                  <p>Du : <%= booking.start_date.strftime('%-d %b. %y') %></p>
+                  <p>Au : <%= booking.end_date.strftime('%-d %b. %y') %></p>
+                  <br>
+
+
+                      <p class="<%= booking.status == 'accepted' ? 'accepted-confirmation' : ' refused-confirmation' %>">
+                      <strong><%= booking.status.upcase %></strong></p>
+
+
+
+                  <br>
                 </div>
               <% end %>
 
