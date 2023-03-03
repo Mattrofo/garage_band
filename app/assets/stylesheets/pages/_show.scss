@@ -1,0 +1,32 @@
+
+
+.container-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+  margin-left: 100px;
+}
+
+
+.description-show {
+  border: 1px solid #808371;
+  border-radius: 10px;
+  width: 479px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.description-show p {
+  font-size: medium;
+  text-align: center;
+  padding: 17px;
+}
+
+.photo-double {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
