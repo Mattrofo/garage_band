@@ -17,7 +17,6 @@
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                   <%= link_to "Accueil", root_path, class: "dropdown-item" %>
                   <%= link_to "Tableau de bord", dashboard_path, class: "dropdown-item" %>
-                  <%= link_to "Mes bookings", dashboard_path, class: "dropdown-item" %>
                   <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class: "dropdown-item", data: {turbo_method: :delete} %>
                 </div>
              </li>
