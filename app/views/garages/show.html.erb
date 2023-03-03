@@ -72,10 +72,10 @@
       <div class="bg-white rounded p-3 shadow">
 
         <h3>Nouvelle réservation</h3>
-        <%= simple_form_for [@garage, @booking] do |f| %>
-          <%= f.input :start_date, as: :date, start_year: Date.today.year, order: [:day, :month, :year] %>
-          <%= f.input :end_date, as: :date, start_year: Date.today.year, order: [:day, :month, :year] %>
-          <%= f.submit class: "btn-noir"%>
+        <%= simple_form_for [@garage, @booking], data: { controller: 'flatpickr' } do |f| %>
+          <%= f.input :start_date, as: :string, input_html: { data: { flatpickr_target: "startDate" } } %>
+          <%= f.input :end_date, as: :string, input_html: { data: { flatpickr_target: "endDate" } } %>
+          <%= f.submit "Réserver !", class: "btn-noir"%>
         <% end %>
 
       </div>
