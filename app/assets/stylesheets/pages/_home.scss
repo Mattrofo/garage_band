@@ -37,13 +37,17 @@ justify-content: space-between;
 }
 
 .btn-kaki.variant{
+  display: flex;
   margin-left: 0;
   text-decoration: none;
+  border-radius: 30px;
+  width: 150px;
 }
 
   .container-map{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 100vh;
 
   }
