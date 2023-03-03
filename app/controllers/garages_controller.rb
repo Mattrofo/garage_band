@@ -3,10 +3,9 @@ class GaragesController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
+    @garages = policy_scope(Garage)
     if params[:query].present?
-      @garages = @garages.search_by_address_and_price(params[:query])
-    else
-      @garages = policy_scope(Garage)
+      @garages = Garage.search_by_address_and_price(params[:query])
     end
   end
 
@@ -52,7 +51,7 @@ class GaragesController < ApplicationController
   private
 
   def garage_params
-    params.require(:garage).permit(:titre, :price, :address, :description)
+    params.require(:garage).permit(:titre, :price, :address, :description, :photo)
   end
 
 end

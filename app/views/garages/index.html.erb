@@ -4,7 +4,7 @@
 
   <!----- H1 display --------->
   <div class="h1-index">
-    <h1 >Plus de <%= @garages.count %> places de parking dans la zone recherchée</h1>
+    <h1 >Nous avons trouvé <%= pluralize(@garages.count, 'place') %> de parking dans la zone recherchée</h1>
   </div>
 
   <!----- END H1 display --------->
@@ -13,24 +13,27 @@
   <!----- SEARCH BAR display --------->
 
 <div class="content">
-  <div class="btn-rond">
-    <%= link_to root_path, class: "btn-rond-back" do %>
-      <i class="fa-sharp fa-solid fa-circle-left"></i>
-    <% end %>
-  </div>
-  <div class="btn-rond">
-    <%= link_to new_garage_path, class: "btn-rond-new" do %>
-      <i class="fa-solid fa-plus"></i>
-    <% end %>
-  </div>
-    <div class="search">
-      <input type="text" class="search__input" aria-label="search" placeholder="enter your search">
-      <button class="search__submit" aria-label="submit search"><i class="fas fa-search"></i></button>
+  <div class="bouton-first">
+    <div class="btn-rond">
+      <%= link_to root_path, class: "btn-rond-back" do %>
+        <i class="fa-sharp fa-solid fa-circle-left"></i>
+      <% end %>
     </div>
-    <!--<% form_tag(garages_path, method: "get") do %>
-      <%= text_field_tag :query, nil, placeholder:"enter your search", class: "search__input"%>
-      <%= submit_tag "", class:"fas fa-search" %>
-    <% end %>-->
+    <div class="btn-rond">
+      <%= link_to new_garage_path, class: "btn-rond-new" do %>
+        <i class="fa-solid fa-plus"></i>
+      <% end %>
+    </div>
+   </div>
+  <div class="form-index">
+      <%= form_with url: garages_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find a Garage"
+        %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+      <% end %>
   </div>
 </div>
 

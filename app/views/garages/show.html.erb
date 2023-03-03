@@ -8,12 +8,12 @@
   <div class="d-flex justify-content-center">
 
     <div class="mt-5 p-3">
-      <img class="image", src="https://images.unsplash.com/photo-1570129476815-ba368ac77013?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="un garage">
+      <%= cl_image_tag @garage.photo.key, height: 300, width: 400, crop: :fill %>
     </div>
 
-    <div class="mt-5 px-5">
+    <div class="container-info">
 
-      <div class="d-flex" >
+      <div class="photo-double">
         <div class="p-3">
           <img class="petite-image", src="https://images.unsplash.com/photo-1548184274-f1d3776448b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="un garage">
         </div>
@@ -23,13 +23,8 @@
         </div>
       </div>
 
-      <div class="d-flex">
-        <div class="p-3">
-          <img class="petite-image", src="https://images.unsplash.com/photo-1577801343081-0053b24f62c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="un garage">
-        </div>
-        <div class="p-3">
-          <img class="petite-image", src="https://images.unsplash.com/photo-1551522435-a13afa10f103?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="un garage">
-        </div>
+      <div class="description-show">
+            <p><%= @garage.description %></p>
       </div>
 
     </div>
